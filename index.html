@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spotify Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="sidebar">
+      <div class="logo">
+        <a href="#">      <!--ใส่ a และใส่ # เพราะไม่ได้ใช้ boostrap-->
+        <img src="./icon/fullspotify.png" alt="logo" />
+        </a>              <!--ใส่ a และใส่ # เพราะไม่ได้ใช้ boostrap -->
+      </div>
+
+      <div class="navigation">
+          <ul>
+              <li>
+                  <a href="https://open.spotify.com/">
+                  <span class="fa fa-home"></span> <!--Home Icon-->
+                  <span>Home</span>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="https://open.spotify.com/search">
+                  <span class="fa fa-search"></span> <!--Serch Icon-->
+                  <span>Search</span>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="#">
+                  <span class="fa fas fa-book"></span> <!--Library Icon-->
+                  <span>Your Library</span> 
+                  </a>
+              </li>
+
+          </ul>
+      </div>
+
+      <div class="navigation"> <!--สร้างอีก navigation เพื่อเว้น margin ในการทำ create playlist และ Liked songs-->
+            <ul>
+                <li>
+                    <a href="#">
+                    <span class="fa fas fa-plus-square"></span>
+                    <span>Create Playlist</span> 
+                    </a>
+                </li>
+  
+                <li>
+                    <a href="#">
+                    <span class="fa fas fa-heart"></span> <!-- fas คือการระบุสไตล์ของ icon นั้นๆ "s" หลัง fa ย่อมาจาก solid นั่นก็คือ ความหนาปกติ และสามารถใช้ได้ฟรี -->
+                    <span>Liked Songs</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+      
+        <div class="policies">
+            <ul>
+                <li>
+                    <a href="#">Cookies</a>
+                </li>
+
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="topbar">
+            <div class="prev-next-buttons"> <!--สร้างปุ่ม < > กดเลื่อน-->
+                <button type="button" class="fa fas fa-chevron-left"></button>
+                <button type="button" class="fa fas fa-chevron-right"></button>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="#">Premium</a>
+                    </li>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                    <li>
+                        <a href="#">Download</a>
+                    </li>
+                    <li class="divider"> | </li> <!--สร้างแถบคั่น-->
+                    <li>
+                        <a href="#">Sign Up</a>
+                    </li>
+                </ul>
+                <button type="button">Log In</button> <!--ปุ่ม Log In-->
+            </div>
+        </div>
+
+           <div class="spotify-playlists">
+               <h2>Spotify Playlists</h2>
+
+               <div class="list"> <!-- 1st Playlist Card : 1975 -->
+                   <div class="item">
+                       <a href="https://open.spotify.com/album/6dVCpQ7oGJD1oYs2fv1t5M?si=jUQsTRpiS66rrhcQDqlyVw"><img src="./pics/1975oh.png" /></a>
+                       <div class="play">
+                         <span class="fa fa-play"></span>
+                        </div>
+                        <h4>Being Funny In A F...</h4>
+                        <p>2022 - The 1975</p>
+                   </div>
+              
+                    <div class="item"> <!-- 2nd Playlist Card : Valleys -->
+                        <a href="https://open.spotify.com/album/2W8nO4x2KlHc3z3xxe23PW?si=xHgar4zfQyGKPsGLRY_SwA"><img src="./pics/valleys.png" /></a>
+                        <div class="play">
+                          <span class="fa fa-play"></span>
+                         </div>
+                         <h4>Suck to see you doing better</h4>
+                         <p>2020 - Valleys</p>
+                    </div>
+
+                    <div class="item"> <!-- 3rd Playlist Card : Joji -->
+                        <a href="https://open.spotify.com/album/5EzDhyNZuO7kuaABHwbBKX?si=SSAgrozXS6mXE_HS_AcSoQ"><img src="./pics/joji.png" /></a>
+                        <div class="play">
+                          <span class="fa fa-play"></span>
+                         </div>
+                         <h4>Nectar</h4>
+                         <p>2020 - Joji</p>
+                    </div>
+
+                    <div class="item"> <!-- 4th Playlist Card : Kota -->
+                        <a href="https://open.spotify.com/track/2i40wZkiPAGIFudrGH99nx?si=2fc2759da8764ba3"><img src="./pics/kota.png" /></a>                        
+                        <div class="play">
+                          <span class="fa fa-play"></span>
+                         </div>
+                         <h4>Outside</h4>
+                         <p>2021 - Kota and Friend</p>
+                    </div>
+
+                    <div class="item"> <!-- 5th Playlist Card : Postmalone -->
+                        <a href="https://open.spotify.com/album/6trNtQUgC8cgbWcqoMYkOR?si=mLPSA0zIQXOBX8cQf8Q1yA"><img src="./pics/postmalone.png" /></a>
+                        <div class="play">
+                          <span class="fa fa-play"></span>
+                         </div>
+                         <h4>Beerbongs & bentl...</h4>
+                         <p>2018 - Postmalone, 21 Savage</p>
+                    </div>
+
+                    <div class="item"> <!-- 6th Playlist Card : Keshi -->
+                        <a href="https://open.spotify.com/album/1WVIJaAboRSwJOe4u0n0Q7?si=HXYlsJKlTKqn2dYRempZeQ"><img src="./pics/keshi.png" /></a>
+                        <div class="play">
+                          <span class="fa fa-play"></span>
+                         </div>
+                         <h4>Gabriel</h4>
+                         <p>2022 - Keshi</p>
+                    </div>
+
+                    <div class="item"> <!-- 7th Playlist Card : MILKK -->
+                        <a href="https://open.spotify.com/album/1PKUUY5u2JkuaQLLJ0bejc?si=n5MsKQfbTFKqPhPYa7xYGA"><img src="./pics/milkk.png" /></a>
+                        <div class="play">
+                          <span class="fa fa-play"></span>
+                         </div>
+                         <h4>HEADRUSH</h4>
+                         <p>2019 - MILKK</p>
+                    </div>
+
+                    <div class="item"> <!-- 8th Playlist Card : Arctic -->
+                        <a href="https://open.spotify.com/album/78bpIziExqiI9qztvNFlQu?si=Yg-ROYuOT_W9BsNEF2-GKw"><img src="./pics/arctic.png" /></a>
+                        <div class="play">
+                          <span class="fa fa-play"></span>
+                         </div>
+                         <h4>AM</h4>
+                         <p>2013 - Arctic Monkeys</p>
+                    </div>
+
+                <hr>  <!--เว้น space-->
+
+               </div>
+           </div>
+
+           <div class="spotify-playlists"> <!-- ไม่ต้องเปลี่ยนชื่อเป็น Indie Theme เพราะเรากำหนด style ใน .css เป็นชื่อ .spotify-playlists แล้ว-->
+            <h2>Indie Theme</h2>
+
+            <div class="list"> <!-- .ORG -->
+                <div class="item">
+                    <a href="https://open.spotify.com/playlist/37i9dQZF1DWXQXM7agvwjO?si=cbc309acf0c74fec"><img src="./pics/ORG.png" /></a>
+                    <div class="play">
+                      <span class="fa fa-play"></span>
+                     </div>
+                     <h4>.ORG</h4>
+                     <p>lost spaces, FREEHAND, QLER, brb, TELEx TELEXs</p>
+                </div>
+           
+                 <div class="item"> <!-- Indie Love Songs -->
+                     <a href="https://open.spotify.com/playlist/37i9dQZF1DWZIQpJDqCc10?si=dd9da951d4d44ed5"><img src="./pics/indielovesong.png" /></a>
+                     <div class="play">
+                       <span class="fa fa-play"></span>
+                      </div>
+                      <h4>Indie Love Songs</h4>
+                      <p>The 1975, Arctic Monkeys, Coldplay, Mac DeMarco..</p>
+                 </div>
+
+                 <div class="item"> <!-- Idk. -->
+                     <a href="https://open.spotify.com/playlist/37i9dQZF1DX59NCqCqJtoH?si=f94bfa2f67914f08"><img src="./pics/idk.png" /></a>
+                     <div class="play">
+                       <span class="fa fa-play"></span>
+                      </div>
+                      <h4>Idk.</h4>
+                      <p>Hans Williuams, Phoebe Bridgers, Shiloh Dynasty..</p>
+                 </div>
+
+                 <div class="item"> <!--My Life Is Movie-->
+                     <a href="https://open.spotify.com/playlist/37i9dQZF1DX4OzrY981I1W?si=7c3575f671a94459"><img src="./pics/lifeismovie.png" /></a>
+                     <div class="play">
+                       <span class="fa fa-play"></span>
+                      </div>
+                      <h4>Life Is Movie</h4>
+                      <p>Arctic Monkeys, Keshi,The 1975, Wallows,Vans...</p>
+                 </div>
+
+                 <div class="item"> <!--Feel Good Indie Rock-->
+                     <a href="https://open.spotify.com/playlist/37i9dQZF1DX2sUQwD7tbmL?si=76729c0f887c4d49"><img src="./pics/indierock.png" /></a>
+                     <div class="play">
+                       <span class="fa fa-play"></span>
+                      </div>
+                      <h4>Indie Rock</h4>
+                      <p>Arctic Monkeys, Wallows, Vansire, The Neighbourh...</p>
+                 </div>
+
+                 <div class="item"> <!--Sad-->
+                     <a href="https://open.spotify.com/playlist/37i9dQZF1DWVV27DiNWxkR?si=d30538ae8f714fa9"><img src="./pics/sadindie.png" /></a>
+                     <div class="play">
+                       <span class="fa fa-play"></span>
+                      </div>
+                      <h4>Sad Indie</h4>
+                      <p>The 1975, Arctic Monkeys, Joji, Taylor Swift, Lana D...</p>
+                 </div>
+
+                 <div class="item"> <!--dept-->
+                     <a href="https://open.spotify.com/playlist/37i9dQZF1DWXPoAK0p4FcE?si=bc8670620b314f98"><img src="./pics/dept.png" /></a>
+                     <div class="play">
+                       <span class="fa fa-play"></span>
+                      </div>
+                      <h4>Thai Indie</h4>
+                      <p>Dept., QLER, FREEHAND, HYBS, H3F</p>
+                 </div>
+                 <hr>  <!--คั่น-->
+            </div>
+           </div>
+
+           <div class="spotify-playlists"> <!-- ไม่ต้องเปลี่ยนชื่อเพราะเรากำหนด style ใน .css เป็นชื่อ .spotify-playlists แล้ว-->
+            <h2>Based on your recent listening</h2>
+
+            <div class="list"> <!-- Workspace -->
+                <div class="item">
+                    <a href="https://open.spotify.com/playlist/37i9dQZF1DWUguLb3ceQ64?si=3560a4b8586d4025"><img src="./pics/work.png" /></a>
+                    <div class="play">
+                      <span class="fa fa-play"></span>
+                     </div>
+                     <h4>Workspace</h4>
+                     <p>Jeremy Zucker, Lauv, Conan Grey, Giveon, Keshi</p>
+                </div>
+           
+                 <div class="item"> <!-- Bestie -->
+                     <a href="https://open.spotify.com/playlist/37i9dQZF1DX0bOFurxjQiO?si=p4y6Lda3SqSNM0DpAtP3kg"><img src="./pics/bestie.png" /></a>
+                     <div class="play">
+                       <span class="fa fa-play"></span>
+                      </div>
+                      <h4>Bestie.</h4>
+                      <p>The 1975, Arctic Monkeys, Coldplay, Mac DeMarco..Given, The 1975, Postmalone, Ed Sheeran..</p>
+                 </div>
+
+                 <div class="item"> <!-- Male -->
+                     <a href="https://open.spotify.com/playlist/37i9dQZF1DXbsIkp5zMVV2?si=DtjGSkAHSZeHP0_bx2E5kA"><img src="./pics/maleartist.png" /></a>
+                     <div class="play">
+                       <span class="fa fa-play"></span>
+                      </div>
+                      <h4>Male Artist</h4>
+                      <p>Lauv, Keshi, Giveon, QLER, Justin...</p>
+                 </div>
+
+                 <div class="item"> <!--NIKI-->
+                     <a href="https://open.spotify.com/playlist/37i9dQZF1DWT47jrFbmL3z?si=Fcmkj40mQDC6S-gMB5_29w"><img src="./pics/niki.png" /></a>
+                     <div class="play">
+                       <span class="fa fa-play"></span>
+                      </div>
+                      <h4>NIKI</h4>
+                      <p>JOJI, NIKI, Saweetie, Rich Brain, 88rising...</p>
+                 </div>
+
+                 <div class="item"> <!--เหนื่อยพักก่อน-->
+                     <a href="https://open.spotify.com/playlist/37i9dQZF1DX2d9wHUNcEXV?si=s7pAqVnDQWCnWDX4YXBUQA"><img src="./pics/relax.png" /></a>
+                     <div class="play">
+                       <span class="fa fa-play"></span>
+                      </div>
+                      <h4>Relax</h4>
+                      <p>YENTED, QLER, WHal&Dolph, PIXXIE, Jeff Satur</p>
+                 </div>
+
+                 <div class="item"> <!--เป็นท้อ-->
+                     <a href="https://open.spotify.com/playlist/37i9dQZF1DWTlbUjNA5MKD?si=gWx8O_FZTKiD4YtW7lOIsw"><img src="./pics/tired.png" /></a>
+                     <div class="play">
+                       <span class="fa fa-play"></span>
+                      </div>
+                      <h4>Tired</h4>
+                      <p>QLER, Whai&Doplph, Bambam, Jeff Satur, Billkin</p>
+                 </div>
+
+                 <div class="item"> <!--ที่สุดศลปไทย-->
+                     <a href="https://open.spotify.com/playlist/37i9dQZF1DWUq1VSI3u3gj?si=VQscN2bSTvm-uK8LdU0JwA"><img src="./pics/bestthai.png" /></a>
+                     <div class="play">
+                       <span class="fa fa-play"></span>
+                      </div>
+                      <h4>Billkin</h4>
+                      <p>Billkin ,PP KIT...</p>
+                 </div>
+            </div>
+           </div>
+
+        <div class="preview">
+            <div class="text">
+                <h6>Preview of Spotify</h6>
+                <p>Sign up to get unlimited songs and podcast with occasional ads. No credit card needed.</p>
+            </div>
+            <div class="button">
+                <a href="https://www.spotify.com/us/signup"><button type="button">Sign Up Free</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/23cecef777.js" crossorigin="anonymous"></script> <!--ใส่เพื่อยืนยันความปลอดภัยของ browser-->
+
+     
+</body>
+</html>

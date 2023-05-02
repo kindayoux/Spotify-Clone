@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body{
+    background-color: #121212;
+    font-family: 'Montserrat', sans-serif;
+}
+.sidebar {
+    position: fixed;
+    left: 0 ;
+    top: 0;
+    bottom: 0;
+    width: 196px;
+    background-color: #000000;
+    padding: 24px;
+}
+.sidebar .logo img {
+    width: 110px; /* size of logo */
+    
+}
+.sidebar .navigation ul {
+    list-style: none;
+    margin-top: 20px;  /* ให้ ul ทุกตัวห่างกัน 20px จาก top ของแต่ละตัว */
+}
+.sidebar .navigation ul li {
+    padding: 10px 0px; /* padding-top: 10px; padding-bottom: 10px // padding-left: 0px; padding-right: 0px; */
+}
+.sidebar .navigation ul li a {  /* บรรทัดแก้ตัวอักษร sidebar ใส่สี / size ตรงนี้ */
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 650; /* font-weight ทำให้ตัวอักษร "หนา-บาง" // font-style ทำให้ตัวอักษร "เอียง-ตรง" */
+}
+.sidebar .navigation ul li a:hover,
+.sidebar .navigation ul li a:active,
+.sidebar .navigation ul li a:focus {
+    color: #ffffff; /* เมื่อชี้ไปที่ ul ที่ sidebar : ตัวอักษร จะเปลี่ยนสี */
+}
+.sidebar .navigation ul li a:hover .fa, /* .fa คือ Icon */
+.sidebar .navigation ul li a:active .fa,
+.sidebar .navigation ul li a:focus .fa {
+    color: #854877; /* เมื่อชี้ไปที่ ul ที่ sidebar : icon จะเปลี่ยนสี */
+}
+.sidebar .navigation ul li .fa{
+    font-size: 15px; /* size ของ icon */
+    margin-right: 8px; /* ระยะห่างระหว่าง icon กับ ตัวหนังสือ */
+}
+.sidebar .navigation ul li a:hover .fa:hover,
+.sidebar .navigation ul li a:hover .fa:active,
+.sidebar .navigation ul li a:hover .fa:focus {
+    color: #ffffff; /* คำสั่งเปลี่ยนสีไม่ได้น่าจะมาจากโดนคลุมด้วยคำสั่งที่บนกว่า */
+}
+.sidebar .policies {
+ position: absolute;
+ bottom: 90px;
+}
+.sidebar .policies ul {
+    list-style: none; /* คำสั่งปิดการใส่จุด list */
+}
+.sidebar .policies ul li {
+    padding-bottom: 5px; /* ห่างกัน 5px */
+}
+.sidebar .policies ul li a {
+    color: #b3b3b3;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 10px;
+}
+.sidebar .policies ul li a:hover,
+.sidebar .policies ul li a:active,
+.sidebar .policies ul li a:focus{
+    text-decoration: underline; /* เอาเม้าไปชี้จะเกิด _____ */
+}
+
+.main-container {
+    margin-left: 245px;
+    margin-bottom: 100px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #101010;
+    padding: 14px 30px;
+}
+.topbar .prev-next-buttons button { /* ปุ่ม < > */
+    color: #7a7a7a;
+    cursor: not-allowed;
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    font-size: 18px;
+    border: 0px;
+    background-color: #090909; /* เดิม button ตัวนี้จะมีพื้นหลังสีขาวติดมา ต้องเปลี่ยนเป็นสีเดียวกับพื้นหลัง */
+    margin-right: 10px;
+}
+.topbar .navbar {
+    display: flex;
+    align-items: center;
+}
+.topbar .navbar ul {
+    list-style: none; /* ปิดจุด list */
+}
+.topbar .navbar ul li {
+    display: inline-block;
+    margin: 0px 10px; /* navbar ห่างกันไปทางขวา-ซ้าย 10px */
+    width: 70px;
+}
+.topbar .navbar ul li a {
+    color: #b3b3b3;
+    text-decoration: none; /* ปิด ____ */
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.topbar .navbar ul li a:hover,
+.topbar .navbar ul li a:action,
+.topbar .navbar ul li a:focus {
+    color: #ffffff;
+    font-size: 15px;
+}
+.topbar .navbar ul li.divider { /* ตัวคั่น / */
+    color: #ffffff;
+    font-size: 26px;
+    margin: 0px 20px;
+    width: auto;
+}
+.topbar .navbar button {  /* ปุ่ม Log In */
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 30px; /* ความกว้าง button Log In */
+    border: 0px;
+    border-radius: 40px; /* มุมโค้งเว้า */
+    cursor: pointer;
+    margin-left: 20px; /* ห่างไปทางซ้าย 20px */
+}
+.topbar .navbar button:hover,
+.topbar .navbar button:active,
+.topbar .navbar button:focus {
+    background-color: #f2f2f2;
+}
+.spotify-playlists {
+    padding: 20px 40px;
+}
+.spotify-playlists h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 20px; /* will be change ได้ อย่ายึด */ 
+}
+.spotify-playlists .list {
+    display: flex;
+    gap: 22px;   /* เดิมเป็น font-size: 22px; */ 
+    overflow: visible; /* overflow: visible = กำหนดให้เห็นเนื้อหาที่เกินด้วย / hidden = ไม่เห็น ตัดเลย */ /* เดิมเป็น margin-bottom: 20px; */
+}
+.spotify-playlists .list .item {
+    min-width: 140px;
+    width: 160px;
+    padding: 15px;
+    background-color: #181818;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all ease 0.4s; /* เคลื่อนไหวแค่ 0.4 วิ */
+}
+.spotify-playlists .list .item:hover {
+    background-color: #252525;
+}
+.spotify-playlists .list .item img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.spotify-playlists .list .item .play {
+    position: relative;
+}
+.spotify-playlists .list .item .play .fa {
+    position: absolute;
+    right: 10px;
+    top: -60px;
+    padding: 18px;
+    background-color: #1db954;
+    border-radius: 100%;
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+.spotify-playlists .list .item:hover .play .fa {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+.spotify-playlists .list .item h4 {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 10px;  /* Will ba change ได้อย่ายึด */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.spotify-playlists .list .item p {
+    color: #989898;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+}
+.spotify-playlists hr {
+    margin: 50px 0px 0px; /* เว้นคั่ระหว่าง Spotify Playlist กับ Indie Theme */
+    border-color: #636363;
+}
+.preview { 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.preview h6 {  /* previw of spotify */
+    color: #ffffff;
+    text-transform: uppercase; /* ตัวพิมพ์ใหญ่ */
+    font-weight: 400;
+    font-size: 13 px; 
+    margin-bottom: 9px; /* ตูดห่างจาก ประโยคล่าง 9px */
+}
+.preview p {   /* sign up to get unlimited songs and podcast... */
+    color: #ffffff;
+    font-size: 13px; 
+    font-weight: 500; /* ตัวหนังสือหนา */
+}
+.preview button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer; /* คือเลือกรูป cursor แบบมือชี้ */
+}
